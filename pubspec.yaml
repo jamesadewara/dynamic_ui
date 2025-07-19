@@ -1,0 +1,54 @@
+name: dynamic_ui
+description: >
+  A cross-platform Flutter plugin that provides adaptive UI components based on the target platform — Android, iOS, Windows, macOS, Linux, or Web — using a single unified API.
+
+version: 0.1.0
+homepage: https://github.com/jamesadewara/dynamic_ui
+repository: https://github.com/jamesadewara/dynamic_ui
+issue_tracker: https://github.com/jamesadewara/dynamic_ui/issues
+publish_to: "none" # change to 'https://pub.dev' when ready
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Optional but useful dependencies
+  cupertino_icons: ^1.0.6
+  fluent_ui: ^4.6.3 # for Fluent Windows-style components
+
+  # Optional state/context utils
+  provider: ^6.1.2
+  macos_ui: ^2.0.9
+  fluttertoast: ^8.2.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  plugin:
+    platforms:
+      android:
+        default_package: dynamic_ui
+      ios:
+        default_package: dynamic_ui
+      linux:
+        default_package: dynamic_ui
+      macos:
+        default_package: dynamic_ui
+      windows:
+        default_package: dynamic_ui
+      web:
+        default_package: dynamic_ui
+
+
+# Optional: Points to an example app
+example:
+  path: example
